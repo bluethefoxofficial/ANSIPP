@@ -22,9 +22,9 @@ ANSIPP is a lightweight C++ library that provides support for ANSI escape codes,
 ## Installation
 
 1. Clone the repository:
-   \`\`\`bash
+   ```bash
    git clone https://github.com/bluethefoxofficial/ANSIPP.git
-   \`\`\`
+   ```
 
 2. Include the `ANSIPP.h` header file in your C++ project.
 
@@ -36,31 +36,31 @@ ANSIPP is a lightweight C++ library that provides support for ANSI escape codes,
 
 To apply basic 8-color or 16-color ANSI codes, use the `setForeground` and `setBackground` functions. These functions support the standard color enums.
 
-\`\`\`cpp
+```cpp
 #include "ANSIPP.h"
 
 // Set text to bold red
 std::cout << ANSIPP::ANSI::setStyle(ANSIPP::Style::BOLD)
           << ANSIPP::ANSI::setForeground(ANSIPP::Color::RED)
           << "Bold red text" << ANSIPP::ANSI::reset() << std::endl;
-\`\`\`
+```
 
 ### 256-Color Spectrum
 
 To apply any of the 256 ANSI colors, use `setForeground256` and `setBackground256` and pass the color code.
 
-\`\`\`cpp
+```cpp
 // Set foreground to blue (color code 21) and background to green (color code 46)
 std::cout << ANSIPP::ANSI::setForeground256(21)
           << ANSIPP::ANSI::setBackground256(46)
           << "Blue text on a green background!" << ANSIPP::ANSI::reset() << std::endl;
-\`\`\`
+```
 
 ### Text Styles
 
 Apply various text styles like bold, underline, or reversed.
 
-\`\`\`cpp
+```cpp
 // Apply bold text
 std::cout << ANSIPP::ANSI::setStyle(ANSIPP::Style::BOLD)
           << "Bold text!" << ANSIPP::ANSI::reset() << std::endl;
@@ -68,13 +68,13 @@ std::cout << ANSIPP::ANSI::setStyle(ANSIPP::Style::BOLD)
 // Apply underlined text
 std::cout << ANSIPP::ANSI::setStyle(ANSIPP::Style::UNDERLINE)
           << "Underlined text!" << ANSIPP::ANSI::reset() << std::endl;
-\`\`\`
+```
 
 ## Examples
 
 ### Basic Color Example
 
-\`\`\`cpp
+```cpp
 #include "ANSIPP.h"
 #include <iostream>
 
@@ -88,11 +88,11 @@ int main() {
 
     return 0;
 }
-\`\`\`
+```
 
 ### 256-Color Spectrum Example
 
-\`\`\`cpp
+```cpp
 #include "ANSIPP.h"
 #include <iostream>
 
@@ -108,7 +108,7 @@ int main() {
 
     return 0;
 }
-\`\`\`
+```
 
 ## License
 
